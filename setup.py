@@ -8,7 +8,8 @@ INSTALL_REQUIRES = [
 
 TEST_REQUIRES = [
     'boddle',
-    'nose'
+    'nose',
+    'webtest'
 ]
 
 setup(

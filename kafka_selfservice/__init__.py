@@ -1,7 +1,11 @@
-from bottle import request, route, run, template
+from bottle import Bottle, request, route, run, template, get
+import kafka_selfservice
 
-@route('/')
-def index():
-    return 'Hi %s!' % request.params['name']
+app = Bottle()
+@app.get('/v1/ping')
+def ping():
+    return('pong')
 
-run(host='localhost', port=8080, debug=True)
+
+
+app.run(host='localhost', port=8080, debug=True)
